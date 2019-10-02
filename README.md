@@ -1,2 +1,6 @@
 # smart_lock
-Projeto de sistema de trava por acionamento biométrico
+ Lock system activated by biometric reading.
+
+# Dependencies
+-> pyfingerprint
+  git@github.com:victorfmarques/pyfingerprint.git
