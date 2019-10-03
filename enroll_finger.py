@@ -49,7 +49,7 @@ try:
             arq.write(str(bit))
         arq.close()
 
-    f.downloadImage(dir_template+positionNumber+".bmp")
+    f.downloadImage(dir_template+str(positionNumber)+".bmp")
 
     print('Dedo cadastrado com sucesso')
 #   print('New template position #' + str(positionNumber))
