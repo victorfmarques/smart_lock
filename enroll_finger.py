@@ -52,7 +52,7 @@ try:
     f.downloadImage(dir_template+str(positionNumber)+".bmp")
 
     print('Dedo cadastrado com sucesso')
-#   print('New template position #' + str(positionNumber))
+    print('New template position #' + str(positionNumber))
 except Exception as e:
     print('Operation failed!')
     print('Exception message: ' + str(e))
