@@ -1,5 +1,5 @@
 import time
-from ..pyfingerprint.pyfingerprint import PyFingerprint
+from pyfingerprint.pyfingerprint import PyFingerprint
 
 
 ## Tries to initialize the sensor
