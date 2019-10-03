@@ -13,7 +13,7 @@ try:
     ##  Converte as caracteristicas da imagem lida e as armazena no Charbuffer 1
     f.convertImage(0x01)
 
-    ## Verifica se o dedo já não existe no BD
+    ## Verifica se o dedo ja nao existe no BD
     result = f.searchTemplate()
     positionNumber = result[0]
 
