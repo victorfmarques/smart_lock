@@ -2,17 +2,18 @@ from initialize_sensor import f
 
 file = open("teste_1.txt",'r')
 list_content = file.read().strip().split("|")
+list_valid = ()
 
-for line in list_content:
-    if line.strip():
+for item in list_content:
+    if item.strip():
         try:
-            [int(next(list_content).strip()) for _ in range(4)]
+            list_valid.append(int(item))
         except ValueError:
             pass
 
-print(list_content)
+print(list_valid)
 
-f.uploadCharacteristics(0x01,list_content)
-f.uploadCharacteristics(0x02,list_content)
+f.uploadCharacteristics(0x01,list_valid)
+f.uploadCharacteristics(0x02,list_valid)
 
 print(str(f.createTemplate()))
