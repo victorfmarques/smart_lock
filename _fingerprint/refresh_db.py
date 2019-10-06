@@ -3,7 +3,7 @@ from initialize_sensor import f
 
 print("Antes deteleTemplate " + str(f.getTemplateCount()))
 
-for i in range (0,f.getTemplateCount()-1):
+for i in range (0,f.getTemplateCount()):
     print("item "+ str(i))
     f.deleteTemplate(i)
 
