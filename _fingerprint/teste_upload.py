@@ -18,5 +18,5 @@ f.uploadCharacteristics(0x02,list_valid)
 
 print(f.getTemplateCount())
 print("Create Template -> "str(f.createTemplate()))
-print("Store Template  -> "f.storeTemplate())
+print("Store Template  -> "str(f.storeTemplate()))
 print(f.getTemplateCount())

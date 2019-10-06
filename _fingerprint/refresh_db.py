@@ -1,10 +1,10 @@
 import time
 from initialize_sensor import f
 
-print("Antes deteleTemplate " + f.getTemplateCount())
+print("Antes deteleTemplate " + str(f.getTemplateCount()))
 
 for i in range (0,f.getTemplateCount()-1):
-    print("item "+i)
+    print("item "+ str(i))
     f.deleteTemplate(i)
 
-print("Depois deteleTemplate " + f.getTemplateCount())
+print("Depois deteleTemplate " + str(f.getTemplateCount()))
