@@ -2,7 +2,7 @@ from initialize_sensor import f
 
 file = open("teste_1.txt",'r')
 list_content = file.read().strip().split("|")
-list_valid = ()
+list_valid = []
 
 for item in list_content:
     if item.strip():
