@@ -16,4 +16,5 @@ print(list_valid)
 f.uploadCharacteristics(0x01,list_valid)
 f.uploadCharacteristics(0x02,list_valid)
 
+print(f.getTemplateCount())
 print(str(f.createTemplate()))
