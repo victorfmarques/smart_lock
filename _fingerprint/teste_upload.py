@@ -1,7 +1,7 @@
 from initialize_sensor import f
 
 file = open("teste_1.txt",'r')
-list_content = file.read().split("|")
+list_content = list(map(int, file.read().split("|")))
 
 print(list_content)
 
