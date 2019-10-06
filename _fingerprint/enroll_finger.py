@@ -46,7 +46,7 @@ try:
 
     with open("teste.txt","a") as arq:
         for bit in characteristics:
-            arq.write(str(bit))
+            arq.write(str(bit)+"|")
         arq.close()
 
     f.downloadImage(dir_template+str(positionNumber)+".bmp")
