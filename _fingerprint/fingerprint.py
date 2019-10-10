@@ -9,9 +9,9 @@ class Fingerprint(PyFingerprint):
             raise ValueError('Sensor desconhecido')
 
         except Exception as e:
-        print('Sensor nao inicializado!')
-        print('Exception message: ' + str(e))
-        exit(1)
+            print('Sensor nao inicializado!')
+            print('Exception message: ' + str(e))
+            exit(1)
 
 
     def registra_digital(self):
