@@ -16,7 +16,7 @@ class Fingerprint(PyFingerprint):
 
     def registra_digital(self):
         try:
-            dir_template = "/home/pi/teste_HIODE/"s
+            dir_template = "/home/pi/teste_HIODE/"
             print('Insira o dedo...')
 
             ## Aguarda a leitura do dedo
