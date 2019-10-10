@@ -1,8 +1,7 @@
 from fingerprint import Fingerprint
 
-f = Fingerprint()
-
 def carrega_txt():
+    f = Fingerprint()
     file = open("teste_1.txt",'r')
     list_content = file.read().strip().split("|")
     list_valid = []
@@ -26,6 +25,11 @@ def carrega_txt():
 
 
 def limpa_db(self):
+    f = Fingerprint()
     print("Depois " + str(f.getTemplateCount()))
     f.limpa_bd()
     print("Antes "+ str(f.getTemplateCount()))
+
+def enroll(self):
+    f = Fingerprint()
+    f.registra_digital()
