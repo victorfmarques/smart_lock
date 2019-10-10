@@ -6,6 +6,7 @@ class Fingerprint(PyFingerprint):
 
     def __init__(self):
         try:
+            super(Fingerprint, self).__init__('/dev/ttyUSB0', 57600, 0xFFFFFFFF, 0x00000000)
             if (self.verifyPassword() == False):
                 raise ValueError('Sensor desconhecido')
         except Exception as e:
