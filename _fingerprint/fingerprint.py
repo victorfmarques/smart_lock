@@ -7,7 +7,6 @@ class Fingerprint(PyFingerprint):
     def __init__(self):
         if (self.verifyPassword() == False):
             raise ValueError('Sensor desconhecido')
-
         except Exception as e:
             print('Sensor nao inicializado!')
             print('Exception message: ' + str(e))
