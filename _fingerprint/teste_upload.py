@@ -1,6 +1,6 @@
 from fingerprint import Fingerprint
 
-f = Fingerprint
+f = Fingerprint()
 
 def carrega_txt():
     file = open("teste_1.txt",'r')

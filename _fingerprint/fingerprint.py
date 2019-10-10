@@ -8,68 +8,68 @@ class Fingerprint(PyFingerprint):
         if (self.verifyPassword() == False):
             raise ValueError('Sensor desconhecido')
 
-    except Exception as e:
-    print('Sensor nao inicializado!')
-    print('Exception message: ' + str(e))
-    exit(1)
+        except Exception as e:
+        print('Sensor nao inicializado!')
+        print('Exception message: ' + str(e))
+        exit(1)
 
 
     def registra_digital(self):
-    try:
-        dir_template = "/home/pi/teste_HIODE/"s
-        print('Insira o dedo...')
+        try:
+            dir_template = "/home/pi/teste_HIODE/"s
+            print('Insira o dedo...')
 
-        ## Aguarda a leitura do dedo
-        while (self.readImage() == False):
-            pass
+            ## Aguarda a leitura do dedo
+            while (self.readImage() == False):
+                pass
 
-        ##  Converte as caracteristicas da imagem lida e as armazena no Charbuffer 1
-        self.convertImage(0x01)
+            ##  Converte as caracteristicas da imagem lida e as armazena no Charbuffer 1
+            self.convertImage(0x01)
 
-        ## Verifica se o dedo ja nao existe no BD
-        result = self.searchTemplate()
-        positionNumber = result[0]
+            ## Verifica se o dedo ja nao existe no BD
+            result = self.searchTemplate()
+            positionNumber = result[0]
 
-        if (positionNumber >= 0):
-            print('Template ja existente #' + str(positionNumber))
-            exit(0)
+            if (positionNumber >= 0):
+                print('Template ja existente #' + str(positionNumber))
+                exit(0)
 
-        print('Remova o dedo...')
-        time.sleep(2)
+            print('Remova o dedo...')
+            time.sleep(2)
 
-        print('Insira o dedo novamente...')
+            print('Insira o dedo novamente...')
 
-        ## Aguarda a releitura do dedo
-        while (self.readImage() == False):
-            pass
+            ## Aguarda a releitura do dedo
+            while (self.readImage() == False):
+                pass
 
-        ## Converte as caracteristicas da imagem lida e as armazena no Charbuffer 2
-        self.convertImage(0x02)
+            ## Converte as caracteristicas da imagem lida e as armazena no Charbuffer 2
+            self.convertImage(0x02)
 
-        ## Compara as caracteristicas guardadas nos buffers
-        if (self.compareCharacteristics() == 0):
-            raise Exception('Os dedos nao condizem')
+            ## Compara as caracteristicas guardadas nos buffers
+            if (self.compareCharacteristics() == 0):
+                raise Exception('Os dedos nao condizem')
 
-        ## Cria o Template
-        self.createTemplate()
+            ## Cria o Template
+            self.createTemplate()
 
-        ## Armazena o template
-        positionNumber = self.storeTemplate()
-        characteristics = self.downloadCharacteristics(0x02)
+            ## Armazena o template
+            positionNumber = self.storeTemplate()
+            characteristics = self.downloadCharacteristics(0x02)
 
-        with open("teste.txt", "a") as arq:
-            for bit in characteristics:
-                arq.write(str(bit) + "|")
-            arq.close()
+            with open("teste.txt", "a") as arq:
+                for bit in characteristics:
+                    arq.write(str(bit) + "|")
+                arq.close()
 
-        self.downloadImage(dir_template + str(positionNumber) + ".bmp")
+            self.downloadImage(dir_template + str(positionNumber) + ".bmp")
 
-        print('Dedo cadastrado com sucesso')
-        print('New template position #' + str(positionNumber))
-    except Exception as e:
-        print('Operation failed!')
-        print('Exception message: ' + str(e))
-        exit(1)
+            print('Dedo cadastrado com sucesso')
+            print('New template position #' + str(positionNumber))
+        except Exception as e:
+            print('Operation failed!')
+            print('Exception message: ' + str(e))
+            exit(1)
 
 
     def valida_digital(self):
