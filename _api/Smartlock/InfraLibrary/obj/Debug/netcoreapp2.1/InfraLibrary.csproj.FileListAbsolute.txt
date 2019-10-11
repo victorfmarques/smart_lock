@@ -1,0 +1,6 @@
+C:\Users\Leandro\source\repos\Smartlock\InfraLibrary\bin\Debug\netcoreapp2.1\InfraLibrary.deps.json
+C:\Users\Leandro\source\repos\Smartlock\InfraLibrary\bin\Debug\netcoreapp2.1\InfraLibrary.dll
+C:\Users\Leandro\source\repos\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.1\InfraLibrary.csprojAssemblyReference.cache
+C:\Users\Leandro\source\repos\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.1\InfraLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Leandro\source\repos\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.1\InfraLibrary.AssemblyInfoInputs.cache
+C:\Users\Leandro\source\repos\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.1\InfraLibrary.AssemblyInfo.cs
