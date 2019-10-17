@@ -23,20 +23,21 @@ namespace InfraLibrary.BaseCommands
 
         public ConnectionState State => throw new NotImplementedException();
 
-        public IDbConnection SetarConnection(string conexao)
+        public IDbConnection SetarConnection(string conexao = null)
         {
             this.conexao = new NpgsqlConnection
             {
-                ConnectionString = conexao
+                ConnectionString = string.IsNullOrWhiteSpace(conexao) ? this.ConnectionString : conexao,
             };
             this.conexao.Open();
             return this.conexao;
         }
 
         public void Dispose()
-        {
-            if (this.conexao.State == System.Data.ConnectionState.Open)
-                conexao.Close();
+         {
+            if(conexao != null)
+                if (this.conexao.State == System.Data.ConnectionState.Open)
+                    conexao.Close();
         }
 
         public IDbTransaction BeginTransaction()

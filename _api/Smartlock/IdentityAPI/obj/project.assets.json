@@ -12721,11 +12721,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\IdentityAPI\\IdentityAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj",
       "projectName": "IdentityAPI",
-      "projectPath": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\IdentityAPI\\IdentityAPI.csproj",
+      "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj",
       "packagesPath": "C:\\Users\\Leandro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\IdentityAPI\\obj\\",
+      "outputPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -12746,8 +12746,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Leandro\\source\\repos\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
-              "projectPath": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\InfraLibrary\\InfraLibrary.csproj"
+            "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
+              "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj"
             }
           }
         }

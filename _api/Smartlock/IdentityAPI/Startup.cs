@@ -12,13 +12,15 @@ namespace IdentityAPI
     public class Startup
     {
         public string ConnectionString { get; set; }
+        public IConfiguration Configuration { get; }
+
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
             ConnectionString = configuration.GetConnectionString("Auth");
         }
 
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -27,6 +29,7 @@ namespace IdentityAPI
             services.AddScoped(typeof(ConnectionCommand));
             services.AddScoped<IAuthConnectionCommand, AuthConnectionCommand>();
             services.AddScoped<IJwtGenerationCommand, JwtGenerationCommand>();
+            var value = Configuration["Jwt"];
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +40,7 @@ namespace IdentityAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            var value = Configuration["Jwt"];
 
             app.UseMvc();
         }

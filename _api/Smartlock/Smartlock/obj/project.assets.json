@@ -2794,7 +2794,7 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "Npgsql/4.1.0": {
+      "Npgsql/4.1.1": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3",
@@ -4654,6 +4654,19 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "InfraLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Npgsql": "4.1.1"
+        },
+        "compile": {
+          "bin/placeholder/InfraLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InfraLibrary.dll": {}
         }
       }
     }
@@ -7773,10 +7786,10 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "Npgsql/4.1.0": {
-      "sha512": "c1qdtewUjM8XC0uPntSNIw1ZhIK7nTUwUH7libNQLNUFyEgMPuK0cgtZtIlw6xhraDv31M8dYzUFCdut4BwVvg==",
+    "Npgsql/4.1.1": {
+      "sha512": "VvYSduwCVCy1erIntV3jVbBduAL8+hqobg8xf5xPmkqzGJ5j9Wx4y/eXz2+BLmFkozJEjTzxz8/X5cOyJ4P9Ig==",
       "type": "package",
-      "path": "npgsql/4.1.0",
+      "path": "npgsql/4.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7792,7 +7805,7 @@
         "lib/netstandard2.1/Npgsql.dll",
         "lib/netstandard2.1/Npgsql.pdb",
         "lib/netstandard2.1/Npgsql.xml",
-        "npgsql.4.1.0.nupkg.sha512",
+        "npgsql.4.1.1.nupkg.sha512",
         "npgsql.nuspec",
         "postgresql.png"
       ]
@@ -12683,16 +12696,22 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "InfraLibrary/1.0.0": {
+      "type": "project",
+      "path": "../InfraLibrary/InfraLibrary.csproj",
+      "msbuildProject": "../InfraLibrary/InfraLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Dapper >= 2.0.30",
+      "InfraLibrary >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9",
-      "Npgsql >= 4.1.0"
+      "Npgsql >= 4.1.1"
     ]
   },
   "packageFolders": {
@@ -12703,11 +12722,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\Smartlock\\Smartlock.csproj",
+      "projectUniqueName": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\Smartlock\\Smartlock.csproj",
       "projectName": "Smartlock",
-      "projectPath": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\Smartlock\\Smartlock.csproj",
+      "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\Smartlock\\Smartlock.csproj",
       "packagesPath": "C:\\Users\\Leandro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\Smartlock\\obj\\",
+      "outputPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\Smartlock\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -12727,7 +12746,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
+              "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -12765,7 +12788,7 @@
           },
           "Npgsql": {
             "target": "Package",
-            "version": "[4.1.0, )"
+            "version": "[4.1.1, )"
           }
         },
         "imports": [

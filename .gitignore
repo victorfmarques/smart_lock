@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs
+/_api/Smartlock/.vs/Smartlock/v16/Server/sqlite3
+/_api/Smartlock/.vs/Smartlock
+/_api/Smartlock/IdentityAPI/obj/Release/netcoreapp2.1
+/_api/Smartlock/IdentityAPI/obj/Debug/netcoreapp2.1
+/_api/Smartlock/InfraLibrary/bin/Debug/netcoreapp2.1
+/_api/Smartlock/InfraLibrary/obj/Release/netcoreapp2.1
+/_api/Smartlock/Smartlock/bin/Debug/netcoreapp2.1/InfraLibrary.dll
+/_api/Smartlock/Smartlock/bin/Debug/netcoreapp2.1

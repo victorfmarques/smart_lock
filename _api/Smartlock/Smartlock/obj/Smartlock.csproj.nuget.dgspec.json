@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Leandro\\source\\repos\\Smartlock\\Smartlock\\Smartlock.csproj": {}
+    "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\Smartlock\\Smartlock.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Leandro\\source\\repos\\Smartlock\\Smartlock\\Smartlock.csproj": {
+    "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\Smartlock\\Smartlock.csproj",
-        "projectName": "Smartlock",
-        "projectPath": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\Smartlock\\Smartlock.csproj",
+        "projectUniqueName": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
+        "projectName": "InfraLibrary",
+        "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
         "packagesPath": "C:\\Users\\Leandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\Smartlock\\obj\\",
+        "outputPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,6 +32,68 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\Smartlock\\Smartlock.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\Smartlock\\Smartlock.csproj",
+        "projectName": "Smartlock",
+        "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\Smartlock\\Smartlock.csproj",
+        "packagesPath": "C:\\Users\\Leandro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\Smartlock\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Leandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
+                "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -69,7 +131,7 @@
             },
             "Npgsql": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.1.1, )"
             }
           },
           "imports": [

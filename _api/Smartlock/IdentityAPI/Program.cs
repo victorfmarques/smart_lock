@@ -14,11 +14,26 @@ namespace IdentityAPI
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .UseUrls("http://localhost:5001/")
+                .Build();
+
+            host.Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    config.SetBasePath(Directory.GetCurrentDirectory());
+                    config.AddJsonFile(
+                        "appsettings.json", optional: true, reloadOnChange: true);
+                });
+
     }
 }

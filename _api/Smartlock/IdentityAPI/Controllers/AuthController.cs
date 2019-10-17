@@ -18,9 +18,19 @@ namespace IdentityAPI.Controllers
             [FromServices] IJwtGenerationCommand jwtGenerationCommand
         )
         {
-            authModel.Digitais = await connectionCommand.ObterDigitais(authModel.UserId);
+            //authModel.Digitais = await connectionCommand.ObterDigitais(authModel.UserId);
 
-            return Json(jwtGenerationCommand.GenerateToken(authModel));
+            return Ok(jwtGenerationCommand.GenerateToken(authModel));
+        }
+
+        [HttpPost("inserirdigital")]
+        public async Task<IActionResult> InserirDigital(
+            [FromBody] DigitalModel model,
+            [FromServices] IAuthConnectionCommand command
+        )
+        {
+            await command.InserirDigital(model);
+            return Ok();
         }
     }
 }

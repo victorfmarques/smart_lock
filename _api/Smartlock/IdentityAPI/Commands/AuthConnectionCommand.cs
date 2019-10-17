@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using Dapper;
+using IdentityAPI.Interfaces;
+using IdentityAPI.Model;
 using InfraLibrary.BaseCommands;
 using Microsoft.Extensions.Configuration;
-using Dapper;
-using IdentityAPI.Interfaces;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace IdentityAPI.Commands
 {
@@ -25,5 +26,16 @@ namespace IdentityAPI.Commands
                 return await conexao.QueryAsync<string>(query, new { idUsuario });
             }
         }
+
+        public async Task InserirDigital(DigitalModel model)
+        {
+            using(var conexao = SetarConnection(ConnectionString))
+            {
+                var query = @"INSERT INTO usuariodigital (idusuario,digital)
+                               VALUES(@idUsuario, @digital)";
+
+                await conexao.ExecuteAsync(query, new { idUsuario = model.UserId, digital = model.Digital });
+            }
+        } 
     }
 }

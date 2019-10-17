@@ -995,11 +995,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
       "projectName": "InfraLibrary",
-      "projectPath": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
+      "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
       "packagesPath": "C:\\Users\\Leandro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leandro\\source\\repos\\Smartlock\\InfraLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

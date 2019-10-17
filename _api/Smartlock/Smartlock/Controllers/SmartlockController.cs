@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Smartlock.Interfaces.Repositorio.Escrita;
 using Smartlock.Interfaces.Repository;
+using Smartlock.Model;
 using System;
 using System.IO;
 using System.Linq;
@@ -7,32 +10,45 @@ using System.Threading.Tasks;
 
 namespace Smartlock.Controllers
 {
+    [Authorize]
     [Produces("application/json")]
     [Route("api/smartlock")]
     public class SmartlockController : Controller
     {
-        private ISmartlockRepository smartlockRepository;
+        private ISmartlockReadRepository smartlockReadRepository;
+        private ISmartlockWriteRepository smartlockWriteRepository;
 
-        public SmartlockController(ISmartlockRepository smartlockRepository)
+        public SmartlockController(ISmartlockReadRepository smartlockReadRepository, ISmartlockWriteRepository smartlockWriteRepository)
         {
-            this.smartlockRepository = smartlockRepository;
+            this.smartlockReadRepository = smartlockReadRepository;
+            this.smartlockWriteRepository = smartlockWriteRepository;
         }
 
-        [HttpGet("obterimagens")]
-        public async Task<IActionResult> ObterImagens()
+        [HttpGet("obterdigitais")]
+        public async Task<IActionResult> ObterDigitais()
         {
-            var imagens = await smartlockRepository.ObterImagens();
-            var stream = imagens.Select(s => s.Imagem).FirstOrDefault();
-            var str = System.Text.Encoding.Default.GetString(stream);
-            var imagemBinaria = hex2binary(str);
-            return Ok(imagemBinaria);
+            try
+            {
+                return Ok(await this.smartlockReadRepository.ObterDigitais());
+            }
+            catch
+            {
+                return BadRequest("deu ruim");
+            }
         }
 
-        private string hex2binary(string hexvalue)
+        [HttpPost("inserirdigital")]
+        public async Task<IActionResult> InserirDigital([FromBody] DigitalModel model)
         {
-            string binaryval = "";
-            binaryval = Convert.ToString(Convert.ToInt32(hexvalue, 16), 2);
-            return binaryval;
+            try
+            {
+                await smartlockWriteRepository.InserirDigital(model);
+                return Ok();
+            }
+            catch
+            {
+                return BadRequest("Não inseriu não");
+            }
         }
     }
 }

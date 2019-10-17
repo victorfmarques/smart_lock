@@ -1,5 +1,6 @@
 ﻿using IdentityAPI.Interfaces;
 using IdentityAPI.Model;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -12,16 +13,18 @@ namespace IdentityAPI.Commands
     public class JwtGenerationCommand : IJwtGenerationCommand
     {
         private readonly IConfiguration configuration;
+        private readonly IHostingEnvironment hostingEnvironment;
 
-        public JwtGenerationCommand(IConfiguration configuration)
+        public JwtGenerationCommand(IConfiguration configuration, IHostingEnvironment hostingEnvironment)
         {
+            this.hostingEnvironment = hostingEnvironment;
             this.configuration = configuration;
         }
         public JwtSecurityToken GenerateToken(AuthModel model)
         {
-            var issuer = configuration.GetValue<string>("Jwt:Issuer");
-            var audience = configuration.GetValue<string>("Jwt:Audience");
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetValue<string>("Jwt:Key")));
+            var issuer = configuration.GetSection("Jwt").GetValue<string>("Issuer");
+            var audience = configuration["Audience"];
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var claims = ObterClaims(model);
 
