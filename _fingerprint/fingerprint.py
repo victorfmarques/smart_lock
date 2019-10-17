@@ -14,29 +14,34 @@ class Fingerprint(PyFingerprint):
             print('Exception message: ' + str(e))
             exit(1)
 
+    def procura_digital(self):
+        ## Aguarda a leitura do dedo
+
+        print("Insira o dedo...")
+
+        while (self.readImage() == False):
+            pass
+
+        ## converte a imagem lida e a armazena no charbuffer1
+        self.convertImage(0x01)
+
+        ## Proucura pelo template
+        return self.searchTemplate()
 
     def registra_digital(self):
+        result = False
         try:
             dir_template = "/home/pi/teste_HIODE/"
-            print('Insira o dedo...')
 
-            ## Aguarda a leitura do dedo
-            while (self.readImage() == False):
-                pass
-
-            ##  Converte as caracteristicas da imagem lida e as armazena no Charbuffer 1
-            self.convertImage(0x01)
-
-            ## Verifica se o dedo ja nao existe no BD
-            result = self.searchTemplate()
-            positionNumber = result[0]
+            info_digital = self.procura_digital()
+            positionNumber = info_digital[0]
 
             if (positionNumber >= 0):
                 print('Template ja existente #' + str(positionNumber))
                 exit(0)
 
             print('Remova o dedo...')
-            time.sleep(2)
+            time.sleep(1)
 
             print('Insira o dedo novamente...')
 
@@ -53,55 +58,65 @@ class Fingerprint(PyFingerprint):
 
             ## Cria o Template
             self.createTemplate()
-
+            result = True
             ## Armazena o template
-            positionNumber = self.storeTemplate()
-            characteristics = self.downloadCharacteristics(0x02)
+#            positionNumber = self.storeTemplate()
+#            characteristics = self.downloadCharacteristics(0x02)
 
-            with open("teste.txt", "a") as arq:
-                for bit in characteristics:
-                    arq.write(str(bit) + "|")
-                arq.close()
+#            with open("teste.txt", "a") as arq:
+#                for bit in characteristics:
+#                    arq.write(str(bit) + "|")
+#                arq.close()
 
-            self.downloadImage(dir_template + str(positionNumber) + ".bmp")
+#            self.downloadImage(dir_template + str(positionNumber) + ".bmp")
 
             print('Dedo cadastrado com sucesso')
-            print('New template position #' + str(positionNumber))
+
         except Exception as e:
             print('Operation failed!')
             print('Exception message: ' + str(e))
-            exit(1)
+            return result
 
+        return result
 
     def valida_digital(self):
+        result = False
         try:
             print('Favor inserir o dedo...')
 
-            ## Aguarda a leitura do dedo
-            while (self.readImage() == False):
-                pass
+            info_digital = self.proucura_digital()
 
-            ## converte a imagem lida e a armazena no charbuffer1
-            self.convertImage(0x01)
-
-            ## Proucura pelo template
-            result = self.searchTemplate()
-
-            positionNumber = result[0]
-            accuracyScore = result[1]
+            positionNumber = info_digital[0]
+            accuracyScore = info_digital[1]
 
             if (positionNumber == -1):
                 print('Sem dados!')
-                exit(0)
             else:
-                print('Template encontrado na pos #' + str(positionNumber))
+                result = True
+                # print('Template encontrado na pos #' + str(positionNumber))
                 # print('Pontuacao: ' + str(accuracyScore))
 
         except Exception as e:
             print('Operacao falhou!')
             print('Exception message: ' + str(e))
-            exit(1)
+            return result
 
+        return result
+
+    def deleta_digital(self):
+        result = False
+        try:
+            info_digital = self.procura_digital()
+            positionNumber = info_digital[0]
+
+            if positionNumber != -1:
+                result = self.deleteTemplate(positionNumber)
+        except Exception as e:
+            print('Operacao falhou!')
+            print('Exception message: ' + str(e))
+            return result
+
+        return result
 
     def limpa_bd(self):
         for i in range(0, self.getTemplateCount()):
