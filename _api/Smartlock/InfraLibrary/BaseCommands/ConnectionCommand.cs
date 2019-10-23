@@ -15,7 +15,7 @@ namespace InfraLibrary.BaseCommands
             this.configuration = configuration;
         }
 
-        public string ConnectionString { get => this.configuration.GetConnectionString("Smartlock"); set => throw new NotImplementedException(); }
+        public string ConnectionString { get => "User Id=smartlock;Password=ubuntulixo;Host=smartlock.crekutelavgm.us-east-2.rds.amazonaws.com;Port=5432;Database=smartlock"; set => throw new NotImplementedException(); }
 
         public int ConnectionTimeout => 7200;
 

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Smartlock.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Produces("application/json")]
     [Route("api/smartlock")]
     public class SmartlockController : Controller
@@ -43,7 +43,7 @@ namespace Smartlock.Controllers
             try
             {
                 await smartlockWriteRepository.InserirDigital(model);
-                return Ok();
+                return Ok("inseriu sim");
             }
             catch
             {
