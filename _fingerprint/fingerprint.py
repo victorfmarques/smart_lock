@@ -4,6 +4,8 @@ from pyfingerprint.pyfingerprint import PyFingerprint
 
 class Fingerprint(PyFingerprint):
 
+    bool_flag = False
+
     def __init__(self):
         try:
             super(Fingerprint, self).__init__('/dev/ttyUSB0', 57600, 0xFFFFFFFF, 0x00000000)
@@ -14,43 +16,40 @@ class Fingerprint(PyFingerprint):
             print('Exception message: ' + str(e))
             exit(1)
 
-    def procura_digital(self):
+    def procura_digital(self, int_buffer):
         ## Aguarda a leitura do dedo
 
-        print("Insira o dedo...")
-
-        while (self.readImage() == False):
-            pass
-
-        ## converte a imagem lida e a armazena no charbuffer1
-        self.convertImage(0x01)
-
-        ## Proucura pelo template
-        return self.searchTemplate()
+        #print("Insira o dedo...")
+        while  self.bool_flag:
+            if self.readImage():
+                ## converte a imagem lida e a armazena no charbuffer1
+                self.convertImage(int_buffer)
+                ## Proucura pelo template
+                return self.searchTemplate()
+        else:
+            return {}
 
     def registra_digital(self):
         result = False
         try:
             dir_template = "/home/pi/teste_HIODE/"
 
-            info_digital = self.procura_digital()
+            info_digital = self.procura_digital(0x01)
             positionNumber = info_digital[0]
 
             if (positionNumber >= 0):
                 print('Template ja existente #' + str(positionNumber))
-                exit(0)
+                return result
 
             print('Remova o dedo...')
             time.sleep(1)
 
-            print('Insira o dedo novamente...')
+            info_digital = self.procura_digital(0x02)
+            positionNumber = info_digital[0]
 
-            ## Aguarda a releitura do dedo
-            while (self.readImage() == False):
-                pass
-
-            ## Converte as caracteristicas da imagem lida e as armazena no Charbuffer 2
-            self.convertImage(0x02)
+            if (positionNumber >= 0):
+                print('Template ja existente #' + str(positionNumber))
+                return result
 
             ## Compara as caracteristicas guardadas nos buffers
             if (self.compareCharacteristics() == 0):
