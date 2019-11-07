@@ -1,7 +1,7 @@
 import requests
 import json
 
-URL = "https://192.168.43.6:5002/api/smartlock/"
+URL = "https://192.168.43.12:5002/api/smartlock/"
 
 
 class ApiFingerprint(object):
