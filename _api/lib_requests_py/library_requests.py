@@ -37,6 +37,7 @@ class ApiFingerprint(object):
         result = []
 
         response = requests.get(url=URL + "obterdigitais")
+        print(str(response.status_code))
         if response.status_code == 200:
             result = response.json()
             print(json.dumps(result, sort_keys=True, indent=4))
