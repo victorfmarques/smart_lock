@@ -1,7 +1,7 @@
 import requests
 import json
 
-URL = "https://localhost:5002/api/smartlock/"
+URL = "https://192.168.43.6:5002/api/smartlock/"
 
 
 class ApiFingerprint(object):
@@ -42,4 +42,6 @@ class ApiFingerprint(object):
             result = response.json()
             print(json.dumps(result, sort_keys=True, indent=4))
         return result
+
+
 
