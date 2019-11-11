@@ -1,0 +1,17 @@
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\libhostpolicy.so
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\libhostfxr.so
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\IdentityAPI
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\IdentityAPI.deps.json
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\IdentityAPI.runtimeconfig.json
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\IdentityAPI.runtimeconfig.dev.json
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\IdentityAPI.dll
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\IdentityAPI.pdb
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\InfraLibrary.dll
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\bin\Debug\netcoreapp2.0\linux-arm\InfraLibrary.pdb
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\obj\Debug\netcoreapp2.0\linux-arm\IdentityAPI.csproj.CoreCompileInputs.cache
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\obj\Debug\netcoreapp2.0\linux-arm\IdentityAPI.AssemblyInfoInputs.cache
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\obj\Debug\netcoreapp2.0\linux-arm\IdentityAPI.AssemblyInfo.cs
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\obj\Debug\netcoreapp2.0\linux-arm\IdentityAPI.RazorTargetAssemblyInfo.cache
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\obj\Debug\netcoreapp2.0\linux-arm\IdentityAPI.csproj.CopyComplete
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\obj\Debug\netcoreapp2.0\linux-arm\IdentityAPI.dll
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\IdentityAPI\obj\Debug\netcoreapp2.0\linux-arm\IdentityAPI.pdb

@@ -1,11 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Smartlock.Interfaces.Repositorio.Escrita;
 using Smartlock.Interfaces.Repository;
 using Smartlock.Model;
-using System;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Smartlock.Controllers

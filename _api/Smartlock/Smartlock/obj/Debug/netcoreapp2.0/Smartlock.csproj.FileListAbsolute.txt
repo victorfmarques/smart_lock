@@ -1,0 +1,15 @@
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\obj\Debug\netcoreapp2.0\Smartlock.csprojAssemblyReference.cache
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\obj\Debug\netcoreapp2.0\Smartlock.csproj.CoreCompileInputs.cache
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\obj\Debug\netcoreapp2.0\Smartlock.AssemblyInfoInputs.cache
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\obj\Debug\netcoreapp2.0\Smartlock.AssemblyInfo.cs
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\bin\Debug\netcoreapp2.0\Smartlock.deps.json
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\bin\Debug\netcoreapp2.0\Smartlock.runtimeconfig.json
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\bin\Debug\netcoreapp2.0\Smartlock.runtimeconfig.dev.json
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\bin\Debug\netcoreapp2.0\Smartlock.dll
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\bin\Debug\netcoreapp2.0\Smartlock.pdb
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\bin\Debug\netcoreapp2.0\InfraLibrary.dll
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\bin\Debug\netcoreapp2.0\InfraLibrary.pdb
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\obj\Debug\netcoreapp2.0\Smartlock.RazorTargetAssemblyInfo.cache
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\obj\Debug\netcoreapp2.0\Smartlock.csproj.CopyComplete
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\obj\Debug\netcoreapp2.0\Smartlock.dll
+C:\Users\legab\Source\Repos\victorfmarques\smart_lock\_api\Smartlock\Smartlock\obj\Debug\netcoreapp2.0\Smartlock.pdb

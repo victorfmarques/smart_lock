@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\_api",
+    "\\_api\\Smartlock",
+    "\\_arduino",
+    "\\_diagrams"
   ],
+  "SelectedNode": "\\_api\\Smartlock\\Smartlock.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -3,7 +3,6 @@ using IdentityAPI.Interfaces;
 using InfraLibrary.BaseCommands;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -25,7 +24,7 @@ namespace IdentityAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc();
             services.AddScoped(typeof(ConnectionCommand));
             services.AddScoped<IAuthConnectionCommand, AuthConnectionCommand>();
             services.AddScoped<IJwtGenerationCommand, JwtGenerationCommand>();

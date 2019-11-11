@@ -1,0 +1,12 @@
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\bin\Debug\netcoreapp2.0\linux-arm\InfraLibrary.deps.json
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\bin\Debug\netcoreapp2.0\linux-arm\InfraLibrary.dll
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\bin\Debug\netcoreapp2.0\linux-arm\InfraLibrary.pdb
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\bin\Debug\netcoreapp2.0\linux-arm\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\bin\Debug\netcoreapp2.0\linux-arm\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.0\linux-arm\InfraLibrary.csprojAssemblyReference.cache
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.0\linux-arm\InfraLibrary.csproj.CoreCompileInputs.cache
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.0\linux-arm\InfraLibrary.AssemblyInfoInputs.cache
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.0\linux-arm\InfraLibrary.AssemblyInfo.cs
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.0\linux-arm\InfraLibrary.csproj.CopyComplete
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.0\linux-arm\InfraLibrary.dll
+C:\Users\legab\Source\repos\victorfmarques\smart_lock\_api\Smartlock\InfraLibrary\obj\Debug\netcoreapp2.0\linux-arm\InfraLibrary.pdb

@@ -1,39 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj": {}
+    "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj": {
+    "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj",
+        "projectUniqueName": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj",
         "projectName": "IdentityAPI",
-        "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj",
-        "packagesPath": "C:\\Users\\Leandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\obj\\",
+        "projectPath": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\IdentityAPI.csproj",
+        "packagesPath": "C:\\Users\\legab\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\IdentityAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Leandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\legab\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp2.0": {
             "projectReferences": {
-              "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
-                "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj"
+              "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
+                "projectPath": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj"
               }
             }
           }
@@ -45,17 +43,15 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
+        "netcoreapp2.0": {
           "dependencies": {
             "Dapper": {
               "target": "Package",
               "version": "[2.0.30, )"
             },
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
+            "Microsoft.AspNetCore.All": {
               "target": "Package",
-              "version": "[2.1.1, )",
-              "autoReferenced": true
+              "version": "[2.0.0, )"
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
@@ -63,8 +59,9 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.0, )",
+              "version": "[2.0.9, )",
               "autoReferenced": true
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
@@ -78,35 +75,38 @@
           "assetTargetFallback": true,
           "warn": true
         }
+      },
+      "runtimes": {
+        "linux-arm": {
+          "#import": []
+        }
       }
     },
-    "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
+    "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
         "projectName": "InfraLibrary",
-        "projectPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
-        "packagesPath": "C:\\Users\\Leandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Leandro\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\obj\\",
+        "projectPath": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
+        "packagesPath": "C:\\Users\\legab\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Leandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\legab\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp2.0": {
             "projectReferences": {}
           }
         },
@@ -117,12 +117,16 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
+        "netcoreapp2.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.0, )",
+              "version": "[2.0.0, )",
               "autoReferenced": true
             },
             "Npgsql": {
@@ -135,6 +139,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true
+        }
+      },
+      "runtimes": {
+        "linux-arm": {
+          "#import": []
         }
       }
     }
