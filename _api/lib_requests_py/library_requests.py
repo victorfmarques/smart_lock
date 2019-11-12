@@ -33,7 +33,8 @@ def envia_digital_api(_ApiFingerprint):
         print(_ApiFingerprint.__dict__)
         response = requests.post(
             url=URL + "inserirdigital",
-            data=_ApiFingerprint.__dict__
+            data=_ApiFingerprint.__dict__,
+            headers={"Content-Type": "application/json"}
         )
         result = response.status_code == 200
     return result
