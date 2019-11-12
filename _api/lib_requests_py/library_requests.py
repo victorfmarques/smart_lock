@@ -21,13 +21,13 @@ class ApiFingerprint(object):
             raise Exception("_characteristics argument must be a str or a list.")
 
 
-def envia_digital_api():
+def envia_digital_api(_ApiFingerprint):
     result = False
 
-    if ((self.IdUsuario == 0) or (self.Digital == "")):
+    if ((_ApiFingerprint.IdUsuario == 0) or (_ApiFingerprint.Digital == "")):
         raise Exception("Invalid object for request")
     else:
-        response = requests.post(url=URL + "inserirdigital", data=self)
+        response = requests.post(url=URL + "inserirdigital", data=_ApiFingerprint)
         result = response.status_code == 200
     return result
 
