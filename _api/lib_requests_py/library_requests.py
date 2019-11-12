@@ -1,5 +1,6 @@
 import requests
 import json
+import pickle
 
 URL = "http://192.168.43.12:5002/api/smartlock/"
 
@@ -31,7 +32,7 @@ def envia_digital_api(_ApiFingerprint):
     else:
         response = requests.post(
             url = URL + "inserirdigital",
-            json = json.dumps(_ApiFingerprint, sort_keys=True, indent=4)
+            json = pickle.dumps(_ApiFingerprint)
         )
         result = response.status_code == 200
     return result
