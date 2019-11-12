@@ -1,7 +1,6 @@
 import time
 from pyfingerprint.pyfingerprint import PyFingerprint
 
-
 class Fingerprint(PyFingerprint):
 
     bool_flag = False
