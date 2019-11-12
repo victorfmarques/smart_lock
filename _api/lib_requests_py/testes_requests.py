@@ -8,5 +8,5 @@ print("CLASSE INSTANCIADA")
 print("EXECUCAO RECEBE_DIGITAIS_API")
 #library_requests.recebe_digitais_api()
 
-library_requests.envia_digital_api(api)
+print(library_requests.envia_digital_api(api))
 print("EXECUTOU RECEBE_DIGITAIS_API")
