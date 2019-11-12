@@ -27,7 +27,7 @@ def envia_digital_api(_ApiFingerprint):
     if ((_ApiFingerprint.IdUsuario == 0) or (_ApiFingerprint.Digital == "")):
         raise Exception("Invalid object for request")
     else:
-        response = requests.post(url=URL + "inserirdigital", data=_ApiFingerprint)
+        response = requests.post(url=URL + "inserirdigital", data={"IdDigital":_ApiFingerprint.IdUsuario, "Digital":_ApiFingerprint.Digital})
         result = response.status_code == 200
     return result
 
