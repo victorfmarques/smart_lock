@@ -6,28 +6,28 @@ URL = "http://192.168.43.12:5002/api/smartlock/"
 
 
 class ApiFingerprint(object):
-    IdUsuario = 0
-    Digital = ""
+    idUsuario = 0
+    digital = ""
 
-    def __init__(self, _IdUsuario, _Digital):
-        self.IdUsuario = _IdUsuario
+    def __init__(self, _idUsuario, _digital):
+        self.idUsuario = _idUsuario
 
-        if isinstance(_Digital, str):
-            self.Digital = _Digital
+        if isinstance(_digital, str):
+            self.digital = _digital
 
-        elif isinstance(_Digital, list):
-            for bit in _Digital:
-                self.Digital = self.Digital + str(bit) + "|"
+        elif isinstance(_digital, list):
+            for bit in _digital:
+                self.digital = self.digital + str(bit) + "|"
         else:
             raise Exception("_characteristics argument must be a str or a list.")
 
 
 def envia_digital_api(_ApiFingerprint):
     result = False
-    print(_ApiFingerprint.IdUsuario)
-    print(_ApiFingerprint.Digital)
+    print(_ApiFingerprint.idUsuario)
+    print(_ApiFingerprint.digital)
 
-    if ((_ApiFingerprint.IdUsuario == 0) or (_ApiFingerprint.Digital == "")):
+    if ((_ApiFingerprint.idUsuario == 0) or (_ApiFingerprint.digital == "")):
         raise Exception("Invalid object for request")
     else:
         print(json.dumps(_ApiFingerprint.__dict__))
