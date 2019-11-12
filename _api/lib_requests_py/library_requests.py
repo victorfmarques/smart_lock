@@ -24,13 +24,13 @@ class ApiFingerprint(object):
 
 def envia_digital_api(_ApiFingerprint):
     result = False
-    print(_ApiFingerprint.idUsuario)
-    print(_ApiFingerprint.digital)
+    #print(_ApiFingerprint.idUsuario)
+    #print(_ApiFingerprint.digital)
 
     if ((_ApiFingerprint.idUsuario == 0) or (_ApiFingerprint.digital == "")):
         raise Exception("Invalid object for request")
     else:
-        print(json.dumps(_ApiFingerprint.__dict__))
+        print(_ApiFingerprint.__dict__)
         response = requests.post(
             url=URL + "inserirdigital",
             data=_ApiFingerprint.__dict__
