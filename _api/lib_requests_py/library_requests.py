@@ -9,7 +9,7 @@ class ApiFingerprint(object):
     Digital = ""
 
     def __init__(self, _IdUsuario, _Digital):
-        self.id_template = _IdUsuario
+        self.IdUsuario = _IdUsuario
 
         if isinstance(_Digital, str):
             self.Digital = _Digital
