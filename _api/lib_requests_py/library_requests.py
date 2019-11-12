@@ -32,8 +32,8 @@ def envia_digital_api(_ApiFingerprint):
     else:
         print(str(pickle.dumps(_ApiFingerprint)))
         response = requests.post(
-            url = URL + "inserirdigital",
-            json = pickle.dumps(_ApiFingerprint)
+            url=URL + "inserirdigital",
+            json=json.dumps(_ApiFingerprint.__dict__)
         )
         result = response.status_code == 200
     return result
