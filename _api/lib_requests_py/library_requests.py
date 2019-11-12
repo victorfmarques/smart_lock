@@ -21,7 +21,7 @@ class ApiFingerprint(object):
             raise Exception("_characteristics argument must be a str or a list.")
 
 
-def envia_digital_api(self):
+def envia_digital_api():
     result = False
 
     if ((self.IdUsuario == 0) or (self.Digital == "")):
@@ -32,7 +32,7 @@ def envia_digital_api(self):
     return result
 
 
-def recebe_digitais_api(self):
+def recebe_digitais_api():
     result = []
     print(URL)
     response = requests.get(url=URL + "obterdigitais")
