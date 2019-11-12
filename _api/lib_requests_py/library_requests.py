@@ -23,11 +23,13 @@ class ApiFingerprint(object):
 
 def envia_digital_api(_ApiFingerprint):
     result = False
+    print(_ApiFingerprint.IdUsuario)
+    print(_ApiFingerprint.Digital)
 
     if ((_ApiFingerprint.IdUsuario == 0) or (_ApiFingerprint.Digital == "")):
         raise Exception("Invalid object for request")
     else:
-        response = requests.post(url=URL + "inserirdigital", data={"IdDigital":_ApiFingerprint.IdUsuario, "Digital":_ApiFingerprint.Digital})
+        response = requests.post(url=URL + "inserirdigital", data={"IdUsuario":_ApiFingerprint.IdUsuario, "Digital":_ApiFingerprint.Digital})
         result = response.status_code == 200
     return result
 
