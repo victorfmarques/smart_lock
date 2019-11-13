@@ -46,6 +46,6 @@ def recebe_digitais_api():
     response = requests.get(url=URL + "obterdigitais")
     print(str(response.status_code))
     if response.status_code == 200:
-        result = response.json()
+        result = response.data()
         print(json.dumps(result, sort_keys=True, indent=4))
     return result

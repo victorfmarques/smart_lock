@@ -6,7 +6,10 @@ api = library_requests.ApiFingerprint(_idUsuario= 1, _digital="3|3|81|56|20|1|78
 print("CLASSE INSTANCIADA")
 
 print("EXECUCAO RECEBE_DIGITAIS_API")
-print(library_requests.recebe_digitais_api())
+list_digitais = library_requests.recebe_digitais_api()
+
+for digital in list_digitais:
+    print(digital)
 
 print(library_requests.envia_digital_api(api))
 print("EXECUTOU RECEBE_DIGITAIS_API")
