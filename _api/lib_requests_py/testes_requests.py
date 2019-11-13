@@ -9,7 +9,8 @@ print("EXECUCAO RECEBE_DIGITAIS_API")
 list_digitais = library_requests.recebe_digitais_api()
 
 for digital in list_digitais:
-    print(digital)
+    _classe = library_requests.ApiFingerprint(_idUsuario=digital["idUsuario"], _digital=digital["digital"])
+    print(_classe)
 
-print(library_requests.envia_digital_api(api))
+#print(library_requests.envia_digital_api(api))
 print("EXECUTOU RECEBE_DIGITAIS_API")
