@@ -8,8 +8,8 @@ print("CLASSE INSTANCIADA")
 print("EXECUCAO RECEBE_DIGITAIS_API")
 list_digitais = library_requests.recebe_digitais_api()
 
-for digital in list_digitais:
-    digital = digital.__dict__
+for _digital in list_digitais:
+    digital = _digital.__dict__
     _classe = library_requests.ApiFingerprint(_idUsuario=digital["idUsuario"], _digital=digital["digital"])
     print(_classe.digital)
 
