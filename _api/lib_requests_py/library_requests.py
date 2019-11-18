@@ -12,6 +12,9 @@ class ApiFingerprint(object):
     def __init__(self, _idUsuario, _digital):
         self.idUsuario = _idUsuario
 
+        print("idUsuario: {0} ".format(str(type(_idUsuario))))
+        print("digital: {0} ".format(str(type(_digital))))
+
         if isinstance(_digital, str):
             self.digital = _digital
 
