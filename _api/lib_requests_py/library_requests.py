@@ -27,8 +27,8 @@ class ApiFingerprint(object):
 
 def envia_digital_api(_ApiFingerprint):
     result = False
-    #print(_ApiFingerprint.idUsuario)
-    #print(_ApiFingerprint.digital)
+    # print(_ApiFingerprint.idUsuario)
+    # print(_ApiFingerprint.digital)
 
     if ((_ApiFingerprint.idUsuario == 0) or (_ApiFingerprint.digital == "")):
         raise Exception("Invalid object for request")
@@ -45,10 +45,9 @@ def envia_digital_api(_ApiFingerprint):
 
 def recebe_digitais_api():
     result = []
-    print(URL)
+    # print(URL)
     response = requests.get(url=URL + "obterdigitais")
-    print(str(response.status_code))
+    # print(str(response.status_code))
     if response.status_code == 200:
-        response.encoding = "utf-8"
         result = response.json()
     return result
