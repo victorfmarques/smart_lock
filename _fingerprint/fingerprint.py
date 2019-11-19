@@ -1,5 +1,6 @@
 import time
 from pyfingerprint.pyfingerprint import PyFingerprint
+from _api.lib_requests_py import library_requests
 
 class Fingerprint(PyFingerprint):
 
@@ -19,7 +20,7 @@ class Fingerprint(PyFingerprint):
         ## Aguarda a leitura do dedo
 
         #print("Insira o dedo...")
-        while  self.bool_flag:
+        while self.bool_flag:
             if self.readImage():
                 ## converte a imagem lida e a armazena no charbuffer1
                 self.convertImage(int_buffer)
@@ -56,15 +57,25 @@ class Fingerprint(PyFingerprint):
 
             ## Cria o Template
             self.createTemplate()
-            result = True
             ## Armazena o template
-#            positionNumber = self.storeTemplate()
-#            characteristics = self.downloadCharacteristics(0x02)
+            positionNumber = self.storeTemplate()
+            characteristics = self.downloadCharacteristics(0x02)
 
+# ===================================== INSERCAO COM TXT
 #            with open("teste.txt", "a") as arq:
 #                for bit in characteristics:
 #                    arq.write(str(bit) + "|")
 #                arq.close()
+
+# ===================================== INSERCAO API
+            str_characteristics = ""
+            for bit in characteristics:
+                str_characteristics.__add__(str(bit) + "|")
+
+            digital_api = library_requests.ApiFingerprint(positionNumber, str_characteristics)
+            result = library_requests.envia_digital_api(digital_api)
+            if not result:
+                Fingerprint.deleta_digital(positionNumber)
 
 #            self.downloadImage(dir_template + str(positionNumber) + ".bmp")
 
@@ -120,3 +131,37 @@ class Fingerprint(PyFingerprint):
         for i in range(0, self.getTemplateCount()):
             print("item " + str(i))
             self.deleteTemplate(i)
+
+    def dump_bd(self):
+
+        list_digitais = []
+        try:
+            list_digitais = library_requests.recebe_digitais_api()
+            for digital in list_digitais:
+                digital_api = library_requests.ApiFingerprint\
+                    (
+                        _idUsuario=digital["idUsuario"],
+                        _digital=str(digital["digital"])
+                    )
+
+                list_valid = []
+
+                for item in digital_api.digital:
+                    if item.strip():
+                        try:
+                            list_valid.append(int(item))
+                        except ValueError:
+                            pass
+
+                print(list_valid)
+
+                self.uploadCharacteristics(0x01, list_valid)
+                self.uploadCharacteristics(0x02, list_valid)
+
+                print(self.getTemplateCount())
+                print("Create Template -> " + str(self.createTemplate()))
+                print("Store Template  -> " + str(self.storeTemplate()))
+                print(self.getTemplateCount())
+
+        except Exception as e:
+            print("Exception message: " + str(e))

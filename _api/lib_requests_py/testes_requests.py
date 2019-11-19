@@ -20,6 +20,6 @@ list_digitais = library_requests.recebe_digitais_api()
 for digital in list_digitais:
     print(digital)
     _classe = library_requests.ApiFingerprint(
-        _idUsuario=digital["idUsuario"], _digital=str(digital["digital"]))
+    _idUsuario=digital["idUsuario"], _digital=str(digital["digital"]))
 
 print("EXECUTOU RECEBE_DIGITAIS_API")
