@@ -79,7 +79,7 @@ class Fingerprint(PyFingerprint):
             digital_api = library_requests.ApiFingerprint(positionNumber, str_characteristics)
             result = library_requests.envia_digital_api(digital_api)
             if not result:
-                Fingerprint.deleta_digital(positionNumber)
+                self.deleteTemplate(positionNumber)
 
 #            self.downloadImage(dir_template + str(positionNumber) + ".bmp")
 
