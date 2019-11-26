@@ -19,7 +19,7 @@ class Fingerprint(PyFingerprint):
     def procura_digital(self, int_buffer):
         ## Aguarda a leitura do dedo
 
-        #print("Insira o dedo...")
+        print("Insira o dedo...")
         while self.bool_flag:
             if self.readImage():
                 ## converte a imagem lida e a armazena no charbuffer1
