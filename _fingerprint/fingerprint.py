@@ -69,6 +69,7 @@ class Fingerprint(PyFingerprint):
 #                arq.close()
 
 # ===================================== INSERCAO API
+            print(characteristics)
             str_characteristics = ""
             for bit in characteristics:
                 str_characteristics.__add__(str(bit) + "|")
