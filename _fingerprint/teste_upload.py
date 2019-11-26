@@ -35,5 +35,5 @@ def enroll(self):
 
 
 f = Fingerprint()
-f.limpa_bd()
+# f.limpa_bd()
 f.registra_digital()
