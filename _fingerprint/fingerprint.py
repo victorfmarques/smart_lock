@@ -73,6 +73,8 @@ class Fingerprint(PyFingerprint):
             for bit in characteristics:
                 str_characteristics.__add__(str(bit) + "|")
 
+            print(str_characteristics)
+            print(positionNumber)
             digital_api = library_requests.ApiFingerprint(positionNumber, str_characteristics)
             result = library_requests.envia_digital_api(digital_api)
             if not result:
