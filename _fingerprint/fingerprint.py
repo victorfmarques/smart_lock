@@ -80,10 +80,8 @@ class Fingerprint(PyFingerprint):
             result = library_requests.envia_digital_api(digital_api)
             if not result:
                 self.deleteTemplate(positionNumber)
-
-#            self.downloadImage(dir_template + str(positionNumber) + ".bmp")
-
-            print('Dedo cadastrado com sucesso')
+            else:
+                print('Dedo cadastrado com sucesso')
 
         except Exception as e:
             print('Operation failed!')
