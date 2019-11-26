@@ -75,8 +75,8 @@ class Fingerprint(PyFingerprint):
                 str_characteristics = str_characteristics + (str(bit) + "|")
 
             print(str_characteristics)
-            print(positionNumber)
-            digital_api = library_requests.ApiFingerprint(positionNumber, str_characteristics)
+            print(positionNumber+1)
+            digital_api = library_requests.ApiFingerprint(positionNumber+1, str_characteristics)
             result = library_requests.envia_digital_api(digital_api)
             if not result:
                 self.deleteTemplate(positionNumber)
