@@ -72,7 +72,7 @@ class Fingerprint(PyFingerprint):
             print(characteristics)
             str_characteristics = ""
             for bit in characteristics:
-                str_characteristics.__add__(str(bit) + "|")
+                str_characteristics = str_characteristics + (str(bit) + "|")
 
             print(str_characteristics)
             print(positionNumber)
