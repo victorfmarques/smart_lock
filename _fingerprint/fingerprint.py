@@ -80,6 +80,7 @@ class Fingerprint(PyFingerprint):
             result = library_requests.envia_digital_api(digital_api)
             if not result:
                 self.deleteTemplate(positionNumber)
+                print('falha ao cadastrar dedo, tente novamente!')
             else:
                 print('Dedo cadastrado com sucesso')
 
