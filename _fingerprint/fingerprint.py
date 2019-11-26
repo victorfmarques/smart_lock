@@ -1,6 +1,6 @@
 import time
 from pyfingerprint.pyfingerprint import PyFingerprint
-from _api.lib_requests_py import library_requests
+from .._api.lib_requests_py import library_requests
 
 class Fingerprint(PyFingerprint):
 
