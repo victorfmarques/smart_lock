@@ -143,7 +143,7 @@ class Fingerprint(PyFingerprint):
             for digital in list_digitais:
                 digital_api = library_requests.ApiFingerprint\
                     (
-                        _idUsuario=digital["idUsuario"],
+                        _id=digital["id"],
                         _digital=str(digital["digital"])
                     )
 

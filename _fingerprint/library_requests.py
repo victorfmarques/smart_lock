@@ -6,13 +6,13 @@ URL = "http://192.168.43.12:5002/api/smartlock/"
 
 
 class ApiFingerprint(object):
-    idUsuario = 0
+    id = 0
     digital = ""
 
-    def __init__(self, _idUsuario, _digital):
-        self.idUsuario = _idUsuario
+    def __init__(self, _id, _digital):
+        self.id = _id
 
-        print("idUsuario: {0} ".format(str(type(_idUsuario))))
+        print("id: {0} ".format(str(type(_id))))
         print("digital: {0} ".format(str(type(_digital))))
 
         if isinstance(_digital, str):
@@ -27,7 +27,7 @@ class ApiFingerprint(object):
 
 def envia_digital_api(_ApiFingerprint):
     result = False
-    # print(_ApiFingerprint.idUsuario)
+    # print(_ApiFingerprint.id)
     # print(_ApiFingerprint.digital)
 
     if ((_ApiFingerprint.idUsuario == 0) or (_ApiFingerprint.digital == "")):
