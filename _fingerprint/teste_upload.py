@@ -35,13 +35,15 @@ def enroll(self):
 
 
 f = Fingerprint()
-resposta = int(input("1 - Registra_digital\n 2 - Passa digital\n 3 - Limpa bd"))
+resposta = int(input("1 - Registra_digital\n2 - Passa digital\n3 - Limpa bd\n4 - Dump API"))
 if (resposta == 1):
     f.registra_digital()
 elif(resposta == 2):
     f.valida_digital()
 elif(resposta == 3):
     f.limpa_bd()
+elif(resposta == 4):
+    f.dump_bd()
 else:
     print("dunga burro aperta direito")
 
