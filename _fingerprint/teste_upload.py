@@ -34,6 +34,6 @@ def enroll(self):
     pass
 
 
-# f = Fingerprint()
+f = Fingerprint()
 f.limpa_bd()
 # f.registra_digital()
