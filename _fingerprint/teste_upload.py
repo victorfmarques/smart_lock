@@ -31,5 +31,9 @@ def limpa_db(self):
     print("Antes "+ str(f.getTemplateCount()))
 
 def enroll(self):
-    f = Fingerprint()
-    f.registra_digital()
+    pass
+
+
+f = Fingerprint()
+# f.limpa_bd()
+f.registra_digital()
