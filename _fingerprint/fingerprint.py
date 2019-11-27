@@ -96,7 +96,7 @@ class Fingerprint(PyFingerprint):
         try:
             print('Favor inserir o dedo...')
 
-            info_digital = self.proucura_digital()
+            info_digital = self.procura_digital()
 
             positionNumber = info_digital[0]
             accuracyScore = info_digital[1]
