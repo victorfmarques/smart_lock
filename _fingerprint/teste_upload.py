@@ -15,8 +15,8 @@ def carrega_txt():
 
     print(list_valid)
 
-    f.uploadCharacteristics(0x01,list_valid)
-    f.uploadCharacteristics(0x02,list_valid)
+    f.uploadCharacteristics(0x01, list_valid)
+    f.uploadCharacteristics(0x02, list_valid)
 
     print(f.getTemplateCount())
     print("Create Template -> " + str(f.createTemplate()))
@@ -35,5 +35,13 @@ def enroll(self):
 
 
 f = Fingerprint()
-# f.limpa_bd()
-f.registra_digital()
+resposta = int(input("1 - Registra_digital\n 2 - Passa digital\n 3 - Limpa bd"))
+if (resposta == 1):
+    f.registra_digital()
+elif(resposta == 2):
+    f.valida_digital()
+elif(resposta == 3):
+    f.limpa_bd()
+else:
+    print("dunga burro aperta direito")
+
