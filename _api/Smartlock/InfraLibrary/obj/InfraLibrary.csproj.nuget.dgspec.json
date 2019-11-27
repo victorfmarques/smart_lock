@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {}
+    "C:\\Users\\legab\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
+    "C:\\Users\\legab\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\legab\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
         "projectName": "InfraLibrary",
-        "projectPath": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
+        "projectPath": "C:\\Users\\legab\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\InfraLibrary.csproj",
         "packagesPath": "C:\\Users\\legab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\legab\\Source\\repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\obj\\",
+        "outputPath": "C:\\Users\\legab\\Source\\Repos\\victorfmarques\\smart_lock\\_api\\Smartlock\\InfraLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

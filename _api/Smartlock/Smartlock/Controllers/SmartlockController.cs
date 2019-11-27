@@ -46,5 +46,19 @@ namespace Smartlock.Controllers
                 return BadRequest("Não inseriu não");
             }
         }
+
+        [HttpPost("limparbanco")]
+        public async Task<IActionResult> LimparBanco()
+        {
+            try
+            {
+                await smartlockWriteRepository.LimparBanco();
+                return Ok("deu certo primo");
+            }
+            catch
+            {
+                return BadRequest("deu ruim primo");
+            }
+        }
     }
 }

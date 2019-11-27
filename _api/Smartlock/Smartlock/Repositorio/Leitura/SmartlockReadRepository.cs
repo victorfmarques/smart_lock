@@ -21,7 +21,7 @@ namespace Smartlock.Repositorio
         {
             using (var conexao = command.SetarConnection())
             {
-                var query = @"SELECT idusuario, digital
+                var query = @"SELECT id, digital
                                 FROM usuariodigital";
 
                 return await conexao.QueryAsync<DigitalModel>(query);

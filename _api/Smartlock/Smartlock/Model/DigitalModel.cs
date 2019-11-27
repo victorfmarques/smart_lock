@@ -2,7 +2,7 @@
 {
     public class DigitalModel
     {
-        public int IdUsuario { get; set; }
+        public int Id { get; set; }
         public string Digital { get; set; }
     }
 }

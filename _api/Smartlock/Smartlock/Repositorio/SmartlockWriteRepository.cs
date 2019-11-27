@@ -18,10 +18,20 @@ namespace Smartlock.Repositorio
         }
         public async Task InserirDigital(DigitalModel model)
         {
-            using(var conexao = connectionCommand.SetarConnection())
+            using (var conexao = connectionCommand.SetarConnection())
             {
-                var query = "INSERT INTO usuariodigital (idusuario, digital) VALUES (@IdUsuario, @Digital)";
-                await conexao.ExecuteAsync(query, model );
+                var query = "INSERT INTO usuariodigital (digital) VALUES (@Digital)";
+                await conexao.ExecuteAsync(query, model);
+            }
+        }
+
+        public async Task LimparBanco()
+        {
+            using (var conexao = connectionCommand.SetarConnection())
+            {
+                var query = @"ALTER SEQUENCE usuariodigital_id_seq RESTART;
+                              DELETE FROM usuariodigital";
+                await conexao.ExecuteAsync(query);
             }
         }
     }
