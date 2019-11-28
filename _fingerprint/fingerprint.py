@@ -150,7 +150,7 @@ class Fingerprint(PyFingerprint):
                 list_valid = []
 
                 for item in digital_api.digital:
-                    if item.strip():
+                    if item.strip("|"):
                         try:
                             list_valid.append(int(item))
                         except ValueError:
