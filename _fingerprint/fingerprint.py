@@ -49,7 +49,7 @@ class Fingerprint(PyFingerprint):
             positionNumber = info_digital[0]
 
             if (positionNumber >= 0):
-                print('Template ja existente #' + str(positionNumber))
+                print('Template ja existente #' + str(positionNumber + 1))
                 return result
 
             ## Compara as caracteristicas guardadas nos buffers
